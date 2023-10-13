@@ -76,7 +76,7 @@ button:focus{
 
 /* header */
 .header{
-    background: rgb(18, 90, 172);
+    background: transparent;
     position: fixed;
     top: 0;
     width: 100%;
@@ -85,6 +85,12 @@ button:focus{
     align-items: center;
     padding: 1rem;
     z-index: 1;
+    transition: all .3s ease;
+}
+
+.header--dark{
+    background: var(--color-primary);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .header__logo{
@@ -547,4 +553,7 @@ button:focus{
     bottom: 1.5rem;
     right: 1.5rem;
   }
+
+
+  
 }
