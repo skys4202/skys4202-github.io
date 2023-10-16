@@ -16,3 +16,12 @@ const homeHeight = home.offsetHeight;
 document.addEventListener('scroll', ()=> {
     home.style.opacity = 1 - window.scrollY / homeHeight;
 });
+
+
+// Home에 있을때 aside 화살표 버튼 숨기고 밑으로 내리면 생기게 함
+const aside = document.querySelector('.aside');
+const asideHeight = home.offsetHeight;
+document.addEventListener('scroll', () =>{
+    aside.style.opacity = 1 - asideHeight + window.scrollY;
+});
+
