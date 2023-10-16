@@ -25,3 +25,14 @@ document.addEventListener('scroll', () =>{
     aside.style.opacity = 1 - asideHeight + window.scrollY;
 });
 
+//NavBar 768px 이하로 내려갈 때 버튼 나오기
+const navbarMenu = document.querySelector('.header__menu');
+const navbarToggle = document.querySelector('.header__toggle');
+navbarToggle.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+});
+
+//navbar 메뉴 클릭시 메뉴를 자동으로 닫아줌
+navbarMenu.addEventListener('click', () => {
+    navbarMenu.classList.remove('open');
+});

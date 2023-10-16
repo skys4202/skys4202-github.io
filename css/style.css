@@ -50,7 +50,7 @@ button{
 }
 
 button:focus{
-    outline: 1px solid var(--color-accent);
+    outline: 1px solid transparent;
 }
 
 /* common */
@@ -88,6 +88,16 @@ button:focus{
     transition: all .3s ease;
 }
 
+.header__toggle{
+    display: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
 .header--dark{
     background: var(--color-primary);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -117,6 +127,8 @@ button:focus{
 
 .header__menu__item{
     padding: 8px 16px;
+    display: block;
+    border-bottom: 1px solid transparent;
 }
 
 .header__menu__item:hover{
@@ -473,7 +485,7 @@ button:focus{
 
 @media screen and (max-width: 768px){
   .section{
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
   }
 
   .title{
@@ -487,18 +499,29 @@ button:focus{
   .header{
     flex-direction: column;
     align-items: start;
+    background: var(--color-primary);
+  }
+
+  .header__toggle{
+    display: block;
   }
 
   .header__menu{
+    display: none;
     flex-direction: column;
     text-align: center;
-    padding: 1rem 4rem;
+    margin: 1rem 4rem;
     gap: 1rem;
   }
 
   .header__nav{
     width: 100%;
   }
+
+  .header__menu.open{
+    display: flex;
+  }
+
 
 
   #home{
@@ -554,7 +577,6 @@ button:focus{
     bottom: 1.5rem;
     right: 1.5rem;
   }
-
 
   
 }
