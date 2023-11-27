@@ -315,6 +315,7 @@ button:focus{
 
 .categories{
     display: flex;
+    align-items: center;
     justify-content: center;
     margin: 2.5rem;
     gap: 1rem;
