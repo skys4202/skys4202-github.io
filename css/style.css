@@ -136,8 +136,9 @@ button:focus{
 }
 
 .header__menu__item.active{
-    border: 1px solid var(--color-accent);
+    color: var(--color-blue);
     border-radius: 4px;
+    transition: all .25s;
 }
 
 

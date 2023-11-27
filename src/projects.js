@@ -29,7 +29,6 @@ target.classList.add('category--selected');
 
 function filterProjects(filter){
         projects.forEach(project => {
-            console.log(project.dataset.type);
             if (filter == 'all' || filter === project.dataset.type) {
                 project.style.display = 'block';
             }
