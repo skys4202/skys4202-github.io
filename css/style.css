@@ -138,7 +138,7 @@ button:focus{
 .header__menu__item.active{
     color: var(--color-blue);
     border-radius: 4px;
-    transition: all .25s;
+    transition: all.25s;
 }
 
 
